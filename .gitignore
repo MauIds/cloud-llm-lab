@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Modal ---
+.modal/
+
+# --- ML / modelos / checkpoints (pesados, no van a Git) ---
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+checkpoints/
+adapters/
+wandb/
+runs/
+*.log
+
+# --- Secretos / credenciales ---
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+token.json
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
