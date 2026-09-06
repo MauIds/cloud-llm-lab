@@ -5,9 +5,23 @@
 **Proyecto principal:** MentorLM  
 **Proyecto derivado:** TinyGPT  
 **Infraestructura de cómputo:** Modal  
-**Modelo base propuesto:** Qwen3.5-4B  
+**Modelo base propuesto:** ~~Qwen3.5-4B~~ → **Qwen3-4B** (cambiado el 2026-09-06, ver nota abajo)  
 **Método de adaptación:** Supervised Fine-Tuning (SFT) + BF16 LoRA  
 **Objetivo:** aprender de verdad cómo se construye, modifica, evalúa y despliega un LLM moderno, terminando con un proyecto sólido, documentado y compartible.
+
+
+> **📌 Actualización (2026-09-06):** cambiamos el modelo base de `Qwen3.5-4B` a **`Qwen/Qwen3-4B`**.
+> Al investigar el modelo antes de escribir código de inferencia, `Qwen3.5-4B` resultó ser un modelo
+> **multimodal** (visión + texto, "Causal Language Model with Vision Encoder"), con un mecanismo de
+> atención no estándar (Gated DeltaNet en vez de self-attention clásica) y que requiere `transformers`
+> instalado desde la rama `main` de GitHub (no una versión estable).
+>
+> `Qwen3-4B` (la generación anterior) es texto puro, usa atención estándar con Grouped Query Attention
+> (mucho más cercana a la self-attention que vamos a implementar nosotros mismos en TinyGPT), tiene
+> soporte estable en `transformers` (>=4.51.0, pip normal), y mantiene el mismo tamaño (4B), la misma
+> licencia (Apache 2.0) y la misma familia (Qwen). El resto de este documento todavía dice
+> "Qwen3.5-4B" en varios lugares — donde lo veas, ahora se refiere a `Qwen3-4B`, no se reescribió cada
+> mención para conservar el historial de la decisión original.
 
 ---
 
