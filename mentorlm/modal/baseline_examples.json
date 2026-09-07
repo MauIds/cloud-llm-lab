@@ -1,0 +1,9 @@
+[
+  {
+    "model": "Qwen/Qwen3-4B",
+    "prompt": "¿Qué es self-attention? Explícalo de forma sencilla.",
+    "response": "¡Claro! Vamos a explicarlo de forma sencilla:\n\n**Self-attention** es una parte muy importante de un tipo de modelo de inteligencia artificial llamado **transformer**, que se usa en muchas aplicaciones como traducción, escritura, o incluso en sistemas de asistentes virtuales.\n\nImagina que tienes un párrafo o una oración, y quieres entender qué palabras son importantes en cada parte de esa oración. El **self-attention** es como un sistema que te ayuda a ver **qué palabras están relacionadas con otras** en la oración.\n\nPor ejemplo, si tienes la oración:\n\n> \"El gato está en el sofá.\"\n\nEl self-attention te diría que:\n- \"El gato\" es importante para entender \"está en el sofá\".\n- \"Sofá\" es importante para entender dónde está el gato.\n\nAsí, el modelo puede entender mejor el significado de la oración porque no solo mira cada palabra por separado, sino que también ve cómo se relacionan entre sí.\n\nEn resumen:\n**Self-attention** es una herramienta que ayuda a los modelos de IA a entender mejor cómo las palabras se relacionan entre sí en una oración, lo que les permite entender el contexto y la significación de lo que leen o escuchan.",
+    "fecha": "2026-09-07",
+    "notas": "Modelo base (Qwen3-4B sin fine-tuning). Punto de comparacion para evaluar MentorLM despues del entrenamiento (Fase 2 del plan)."
+  }
+]
